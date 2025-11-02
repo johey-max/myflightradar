@@ -1,17 +1,15 @@
-//
-//  FlightRadarApp.swift
-//  FlightRadar
-//
-//  Created by Joseph Langstroth on 2025-11-01.
-//
-
 import SwiftUI
 
 @main
 struct FlightRadarApp: App {
+    @StateObject private var aircraftManager = AircraftManager()
+    @StateObject private var settings = AppSettings()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(aircraftManager)
+                .environmentObject(settings)
         }
     }
 }

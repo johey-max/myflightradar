@@ -6,14 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		43830E242EB6A8300055A015 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43830E232EB6A8300055A015 /* WidgetKit.framework */; };
+		43830E262EB6A8300055A015 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43830E252EB6A8300055A015 /* SwiftUI.framework */; };
+		43830E352EB6A8310055A015 /* FlightRadarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43830E212EB6A82F0055A015 /* FlightRadarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43830E332EB6A8310055A015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43830DE22EB6614E0055A015 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43830E202EB6A82F0055A015;
+			remoteInfo = FlightRadarWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43830E3A2EB6A8310055A015 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				43830E352EB6A8310055A015 /* FlightRadarWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		43830DEA2EB6614E0055A015 /* FlightRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43830E212EB6A82F0055A015 /* FlightRadarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FlightRadarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		43830E232EB6A8300055A015 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		43830E252EB6A8300055A015 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		43830E3C2EB6A9D80055A015 /* FlightRadarWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightRadarWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		43830E102EB66A060055A015 /* Exceptions for "FlightRadar" folder in "FlightRadar" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 43830DE92EB6614E0055A015 /* FlightRadar */;
+		};
+		43830E392EB6A8310055A015 /* Exceptions for "FlightRadarWidget" folder in "FlightRadarWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 43830E202EB6A82F0055A015 /* FlightRadarWidgetExtension */;
+		};
+		43830E422EB6B37B0055A015 /* Exceptions for "FlightRadar" folder in "FlightRadarWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				airports.csv,
+			);
+			target = 43830E202EB6A82F0055A015 /* FlightRadarWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		43830DEC2EB6614E0055A015 /* FlightRadar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				43830E102EB66A060055A015 /* Exceptions for "FlightRadar" folder in "FlightRadar" target */,
+				43830E422EB6B37B0055A015 /* Exceptions for "FlightRadar" folder in "FlightRadarWidgetExtension" target */,
+			);
 			path = FlightRadar;
+			sourceTree = "<group>";
+		};
+		43830E272EB6A8300055A015 /* FlightRadarWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				43830E392EB6A8310055A015 /* Exceptions for "FlightRadarWidget" folder in "FlightRadarWidgetExtension" target */,
+			);
+			path = FlightRadarWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +96,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43830E1E2EB6A82F0055A015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43830E262EB6A8300055A015 /* SwiftUI.framework in Frameworks */,
+				43830E242EB6A8300055A015 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		43830DE12EB6614E0055A015 = {
 			isa = PBXGroup;
 			children = (
+				43830E3C2EB6A9D80055A015 /* FlightRadarWidgetExtension.entitlements */,
 				43830DEC2EB6614E0055A015 /* FlightRadar */,
+				43830E272EB6A8300055A015 /* FlightRadarWidget */,
+				43830E222EB6A8300055A015 /* Frameworks */,
 				43830DEB2EB6614E0055A015 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +123,18 @@
 			isa = PBXGroup;
 			children = (
 				43830DEA2EB6614E0055A015 /* FlightRadar.app */,
+				43830E212EB6A82F0055A015 /* FlightRadarWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		43830E222EB6A8300055A015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43830E232EB6A8300055A015 /* WidgetKit.framework */,
+				43830E252EB6A8300055A015 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +147,12 @@
 				43830DE62EB6614E0055A015 /* Sources */,
 				43830DE72EB6614E0055A015 /* Frameworks */,
 				43830DE82EB6614E0055A015 /* Resources */,
+				43830E3A2EB6A8310055A015 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43830E342EB6A8310055A015 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				43830DEC2EB6614E0055A015 /* FlightRadar */,
@@ -69,6 +163,28 @@
 			productName = FlightRadar;
 			productReference = 43830DEA2EB6614E0055A015 /* FlightRadar.app */;
 			productType = "com.apple.product-type.application";
+		};
+		43830E202EB6A82F0055A015 /* FlightRadarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43830E362EB6A8310055A015 /* Build configuration list for PBXNativeTarget "FlightRadarWidgetExtension" */;
+			buildPhases = (
+				43830E1D2EB6A82F0055A015 /* Sources */,
+				43830E1E2EB6A82F0055A015 /* Frameworks */,
+				43830E1F2EB6A82F0055A015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				43830E272EB6A8300055A015 /* FlightRadarWidget */,
+			);
+			name = FlightRadarWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = FlightRadarWidgetExtension;
+			productReference = 43830E212EB6A82F0055A015 /* FlightRadarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +197,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					43830DE92EB6614E0055A015 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					43830E202EB6A82F0055A015 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
@@ -100,12 +219,20 @@
 			projectRoot = "";
 			targets = (
 				43830DE92EB6614E0055A015 /* FlightRadar */,
+				43830E202EB6A82F0055A015 /* FlightRadarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		43830DE82EB6614E0055A015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43830E1F2EB6A82F0055A015 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +249,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43830E1D2EB6A82F0055A015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43830E342EB6A8310055A015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43830E202EB6A82F0055A015 /* FlightRadarWidgetExtension */;
+			targetProxy = 43830E332EB6A8310055A015 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		43830DF32EB6614F0055A015 /* Debug */ = {
@@ -251,11 +393,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlightRadar/FlightRadar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUM55G7C5Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightRadar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,11 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlightRadar/FlightRadar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUM55G7C5Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightRadar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +449,68 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43830E372EB6A8310055A015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlightRadarWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JUM55G7C5Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightRadarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlightRadarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joge.FlightRadar.FlightRadarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43830E382EB6A8310055A015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlightRadarWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JUM55G7C5Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightRadarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlightRadarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joge.FlightRadar.FlightRadarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +535,15 @@
 			buildConfigurations = (
 				43830DF62EB6614F0055A015 /* Debug */,
 				43830DF72EB6614F0055A015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43830E362EB6A8310055A015 /* Build configuration list for PBXNativeTarget "FlightRadarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43830E372EB6A8310055A015 /* Debug */,
+				43830E382EB6A8310055A015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
